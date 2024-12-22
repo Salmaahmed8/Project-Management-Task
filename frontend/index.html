@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taskify - Task Management</title>
+    <link rel="stylesheet" href="./styles/common.css">
+    <!-- Add Axios for API calls -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+       // Check authentication before loading dashboard
+       window.onload = function() {
+            // Check for token instead of currentUser
+            const token = localStorage.getItem('token');
+            if (!token) {
+                window.location.href = 'pages/auth.html'; // Change to auth.html since that's your authentication page
+            } else {
+                window.location.href = 'pages/dashboard.html';
+            }
+        };
+    </script>
+</head>
+<body>
+    <!-- This page will redirect to login or dashboard -->
+    <div class="loading">Loading...</div>
+</body>
+</html>

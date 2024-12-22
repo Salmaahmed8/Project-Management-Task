@@ -7,7 +7,7 @@
     <title>Login Form</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles/auth.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
 </head>
@@ -90,7 +90,7 @@
         document.getElementById("login").addEventListener("click", function(){
             let email = document.getElementById("email-input").value
             let password = document.getElementById("password-input").value
-            axios.post('https://reqres.in/api/login',
+            axios.post('http://localhost:8000/api/v1/login',
             {
                 "email": email,
                 "password": password
@@ -100,7 +100,8 @@
                 localStorage.setItem("token", token)
                 console.log("token received", token)
 
-                window.location = "dashboard.html";
+                //window.location = "dashboard.html";
+                window.location.href = "http://localhost:5500/frontend/pages/dashboard.html";
 
             }).catch(error => {
                 console.log(error)
