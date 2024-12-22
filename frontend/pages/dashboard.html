@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Sortify</title>
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/dashboard.css">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="sidebar-icons">
+                📋
+                ⏰
+                ❗
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <div class="welcome-section">
+                    <h1>Welcome, <span id="userName">User</span>!</h1>
+                    <p>You have <span id="activeTaskCount">0</span> active tasks</p>
+                </div>
+                <button class="btn btn-primary" id="addTaskBtn">Add New Task</button>
+            </header>
+
+            <section class="task-area">
+                <div class="task-filters">
+                    <button class="btn active">All</button>
+                    <button class="btn">Low</button>
+                    <button class="btn">Medium</button>
+                    <button class="btn">High</button>
+                </div>
+
+                <div id="taskList">
+                    <!-- Tasks will be inserted here -->
+                </div>
+            </section>
+
+            <section class="stats-area">
+                <div class="stat-card">
+                    <h3>Total Tasks</h3>
+                    <p id="totalTasks">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>In Progress</h3>
+                    <p id="inProgressTasks">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Completed</h3>
+                    <p id="completedTasks">0</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../scripts/utils/storage.js"></script>
+    <script src="../scripts/dashboard/tasks.js"></script>
+    <script src="../scripts/dashboard/stats.js"></script>
+</body>
+</html>
