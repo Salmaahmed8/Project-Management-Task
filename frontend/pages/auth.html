@@ -74,40 +74,40 @@
 
     </div>
     <script>
-        const registerButton = document.getElementById("register");
-        const loginButton = document.getElementById("login");
-        const container = document.getElementById("container");
+        // const registerButton = document.getElementById("register");
+        // const loginButton = document.getElementById("login");
+        // const container = document.getElementById("container");
 
-        registerButton.addEventListener("click", () => {
-            container.classList.add("right-panel-active");
-        });
+        // registerButton.addEventListener("click", () => {
+        //     container.classList.add("right-panel-active");
+        // });
 
-        loginButton.addEventListener("click", () => {
-            container.classList.remove("right-panel-active");
-        });
+        // loginButton.addEventListener("click", () => {
+        //     container.classList.remove("right-panel-active");
+        // });
 
 
-        document.getElementById("login").addEventListener("click", function(){
-            let email = document.getElementById("email-input").value
-            let password = document.getElementById("password-input").value
-            axios.post('http://localhost:8000/api/v1/login',
-            {
-                "email": email,
-                "password": password
-            })
-            .then(function (response) {
-                let token = response.data.token
-                localStorage.setItem("token", token)
-                console.log("token received", token)
+        // document.getElementById("login").addEventListener("click", function(){
+        //     let email = document.getElementById("email-input").value
+        //     let password = document.getElementById("password-input").value
+        //     axios.post('http://localhost:8000/api/v1/login',
+        //     {
+        //         "email": email,
+        //         "password": password
+        //     })
+        //     .then(function (response) {
+        //         let token = response.data.token
+        //         localStorage.setItem("token", token)
+        //         console.log("token received", token)
 
-                //window.location = "dashboard.html";
-                window.location.href = "http://localhost:5500/frontend/pages/dashboard.html";
+        //         //window.location = "dashboard.html";
+        //         window.location.href = "http://localhost:5500/frontend/pages/dashboard.html";
 
-            }).catch(error => {
-                console.log(error)
-                alert(error.response.data.error)
-            })
-        })
+        //     }).catch(error => {
+        //         console.log(error)
+        //         alert(error.response.data.error)
+        //     })
+        // })
     </script>
 </body>
 </html>

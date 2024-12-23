@@ -13,9 +13,9 @@
             // Check for token instead of currentUser
             const token = localStorage.getItem('token');
             if (!token) {
-                window.location.href = 'pages/auth.html'; // Change to auth.html since that's your authentication page
+                window.location.href = './pages/auth.html'; // Change to auth.html since that's your authentication page
             } else {
-                window.location.href = 'pages/dashboard.html';
+                window.location.href = './pages/dashboard.html';
             }
         };
     </script>

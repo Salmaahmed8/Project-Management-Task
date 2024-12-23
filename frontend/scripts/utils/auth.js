@@ -29,7 +29,7 @@ document.getElementById("register").addEventListener("click", function () {
         alert("Registration successful! You can now log in.");
         
         // Optionally, redirect to the login page
-        window.location = "auth.html";
+        window.location.href = "auth.html";
     })
     .catch(function (error) {
         // Handle errors and display appropriate feedback
@@ -58,7 +58,7 @@ document.getElementById("login").addEventListener("click", function(){
         console.log("token received", token)
         console.log("Login successful, token received:", token);
 
-        window.location = "dashboard.html";
+        window.location.href = "dashboard.html";
     }).catch(function (error) {
         // Handle errors and display appropriate feedback
         if (error.response) {
